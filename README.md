@@ -42,3 +42,6 @@
 - has_many: users
 
 
+
+
+
