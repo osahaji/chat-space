@@ -13,6 +13,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |group_id|integer|null: false, foreign_key: true|
+|group_name|integer|null: false, foreign_key: true|
 |group_members|integer|null: false, foreign_key: true|
 ### Association
 - has_many:users through :members
