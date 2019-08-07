@@ -1,7 +1,7 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false| 
+|name|string|null: false|index:true
 ### Association
 - has_many :messages
 - has_many :users, through: :groups
@@ -10,7 +10,6 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false|
 |group_members|integer|null: false, foreign_key: true|
 ### Association
 - has_many:users, through: :members
@@ -36,4 +35,4 @@
 |group_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many: users
+- belongs_to :group
