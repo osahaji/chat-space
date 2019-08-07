@@ -4,13 +4,13 @@
 |name|string|null: false|index:true
 ### Association
 - has_many :messages
-- has_many :users, through: :groups
+- has_many : groups, through: :members
 - has_many :members
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_members|integer|null: false, foreign_key: true|
+|name|string|null: false,unique: true|
 ### Association
 - has_many:users, through: :members
 - has_many:members
